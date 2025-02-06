@@ -1,0 +1,33 @@
+import { motion } from 'framer-motion';
+
+export default function HomePage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center px-6">
+      <motion.h1
+        className="text-5xl font-bold mb-4"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        Hi, I'm Navya
+      </motion.h1>
+      <motion.p
+        className="text-lg text-gray-400 mb-6"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
+        A passionate developer specializing in AI & Web Development.
+      </motion.p>
+      <motion.div
+        className="flex space-x-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+      >
+        <a href="#projects" className="px-6 py-3 bg-blue-600 rounded-lg text-white font-semibold hover:bg-blue-700 transition">Projects</a>
+        <a href="#contact" className="px-6 py-3 border border-gray-500 rounded-lg text-white font-semibold hover:bg-gray-800 transition">Contact</a>
+      </motion.div>
+    </div>
+  );
+}
